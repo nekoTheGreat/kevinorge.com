@@ -1,0 +1,13 @@
+$custom_colors: (
+    "dominant": #0094d0,
+    "complement": #e6f4f1,
+);
+
+@each $name, $color in $custom_colors {
+    .bg-#{$name} {
+        background-color: $color;
+    }
+    .text-#{$name} {
+        color: $color;
+    }
+}
