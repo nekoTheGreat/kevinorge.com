@@ -1,10 +1,13 @@
 <script setup>
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 </script>
 <template>
     <nav class="main-nav">
-        <div><a href="/#">Home</a></div>
-        <div><a href="/projects">Projects</a></div>
-        <div><a href="/contacts">Contacts</a></div>
+        <div @click.prevent="router.replace('/')"><NuxtLink to="/">Home</NuxtLink></div>
+        <div @click.prevent="router.replace('/projects')"><NuxtLink to="/projects">Projects</NuxtLink></div>
+        <div @click.prevent="router.replace('/contacts')"><NuxtLink to="/contacts">Contacts</NuxtLink></div>
     </nav>
 </template>
 <style scoped>
@@ -32,5 +35,6 @@
     }
     .main-nav div:hover {
         opacity: .7;
+        cursor: pointer;
     }
 </style>
