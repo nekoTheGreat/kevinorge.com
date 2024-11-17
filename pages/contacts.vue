@@ -1,6 +1,10 @@
 <script setup>
 import { onMounted } from 'vue';
 
+useHead({
+    title: 'Contact me'
+});
+
 const config = useRuntimeConfig()
 const recaptchaKey = ref('');
 
