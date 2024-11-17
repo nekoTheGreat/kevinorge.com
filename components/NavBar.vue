@@ -1,9 +1,4 @@
 <script setup>
-import { Collapse } from 'bootstrap/dist/js/bootstrap';
-
-onMounted(() => {
-    new Collapse('#mainNavBarCollapse', {toggle: false});
-});
 </script>
 <template>
     <nav class="main-nav">
