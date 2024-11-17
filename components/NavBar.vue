@@ -2,30 +2,40 @@
 import { Collapse } from 'bootstrap/dist/js/bootstrap';
 
 onMounted(() => {
-    new Collapse('#mainNavBarCollapse');
+    new Collapse('#mainNavBarCollapse', {toggle: false});
 });
 </script>
 <template>
-    <nav class="navbar navbar-expand-lg fw-bold bg-dominant">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavBarCollapse" aria-controls="mainNavBarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainNavBarCollapse">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                <a class="nav-link text-complement" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle  text-complement" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Projects
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item  text-dominant" href="http://bwd.kevinorge.com:81/">BWD Helpdesk</a></li>
-                </ul>
-                </li>
-            </ul>
-            </div>
-        </div>
+    <nav class="main-nav">
+        <div><a href="/#">Home</a></div>
+        <div><a href="/projects">Projects</a></div>
+        <div><a href="/contacts">Contacts</a></div>
     </nav>
 </template>
+<style scoped>
+    .main-nav {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        padding-top: 5px;
+        position: relative;
+        z-index: 10;
+        width: fit-content;
+    }
+    .main-nav div {
+        border: 1px solid #7b8ca6;
+        border-radius: 5px;
+        background-color: #B6CAE7;
+        width: 100px;
+        text-align: center;
+    }
+    .main-nav div a {
+        text-decoration: none;
+        color: black;
+    }
+    .main-nav div:hover {
+        opacity: .7;
+    }
+</style>
