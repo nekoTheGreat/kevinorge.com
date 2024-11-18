@@ -9,6 +9,11 @@ onMounted(() => {
     if(config.public.maintenance) {
         setPageLayout('maintenance');
     }
+    
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = `https://www.google.com/recaptcha/api.js?render=${config.public.recaptchaKey}`;
+    document.body.appendChild(script);
 });
 </script>
 <template>
@@ -16,3 +21,8 @@ onMounted(() => {
         <NuxtPage/>
     </NuxtLayout>
 </template>
+<style>
+    .grecaptcha-badge {
+        visibility: hidden;
+    }
+</style>
