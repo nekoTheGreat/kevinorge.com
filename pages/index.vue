@@ -10,6 +10,14 @@ useHead({
             <div style="font-size: 2.5rem;">I'm Kevin</div>
             <div style="font-size: 2.5rem;">Full-stack Developer</div>
             <div style="font-size: 2rem;">Ready to build web things</div>
+            <div class="d-flex">
+                <a href="https://www.linkedin.com/in/kevin-orge-583a06b3" class="btn btn-lg">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://github.com/nekoTheGreat" class="btn btn-lg">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
         </div>
         <div class="right-part">
             <div>
