@@ -15,6 +15,11 @@ onMounted(() => {
     script.src = `https://www.google.com/recaptcha/api.js?render=${config.public.recaptchaKey}`;
     document.body.appendChild(script);
 });
+useHead({
+    link: [
+        {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
+    ]
+})
 </script>
 <template>
     <NuxtLayout>
