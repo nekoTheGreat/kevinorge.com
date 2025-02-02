@@ -1,3 +1,10 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #545454;
+    color: #f0f1f5;
+}
 $custom_colors: (
     "dominant": #0094d0,
     "complement": #e6f4f1,
