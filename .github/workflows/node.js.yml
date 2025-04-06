@@ -30,9 +30,13 @@ jobs:
         path: |
           .nuxt
           .output
-        key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
+        key: ${{ runner.os }}-nuxt-build-${{ hashFiles('.output') }}
         restore-keys: |
           ${{ runner.os }}-nuxt-build-
     - name: Install dependencies
       run: npm install
     - run: npm run build
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./output
