@@ -2,7 +2,7 @@
 #
 # To get started with Nuxt see: https://nuxtjs.org/docs/get-started/installation
 #
-name: Deploy Nuxt site to Pages
+name: Build Nuxt Project
 
 on:
   # Allows you to run this workflow manually from the Actions tab
