@@ -28,8 +28,8 @@ jobs:
       uses: actions/cache@v4
       with:
         path: |
-          .nuxt
           .output
+          .nuxt
         key: ${{ runner.os }}-nuxt-build-${{ hashFiles('.output') }}
         restore-keys: |
           ${{ runner.os }}-nuxt-build-
@@ -39,4 +39,4 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: /.output
+        path: ./.output
