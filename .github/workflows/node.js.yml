@@ -34,5 +34,5 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-nuxt-build-
     - name: Install dependencies
-      run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      run: npm install
     - run: npm run build
